@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/leyou?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: /
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+mybatis:
+  type-aliases-package: com.shop.item.pojo
+  configuration:
+    map-underscore-to-camel-case: true  #字段实体属性映射驼峰转换
